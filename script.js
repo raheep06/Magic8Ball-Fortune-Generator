@@ -1,39 +1,56 @@
-/**
- * Here is our array of messages our Eight Ball will store!
- *  
- * Add all the possible fortunes we can get
- * from the Magic 8-Ball!
- */
-const messages = ["It is certain", "It is decidedly so", "Without a doubt", "Yes – definitely", "You may rely on it", "As I see it, yes", "Most likely", "Outlook good", "Yes", "Signs point to yes", "Don’t count on it", "My reply is no", "My sources say no", "Outlook not so good", "Very doubtful", "Reply hazy, try again", "Ask again later", "Better not tell you now", "Cannot predict now", "Concentrate and ask again"];
+const possibleReplies = [
+  "It is certain",
+  "It is decidedly so",
+  
+  "Without a doubt",
+  "Yes – definitely",
+  "You may rely on it",
+  "As I see it, yes",
+  "Most likely",
+  "Outlook good",
+  "Yes",
+  "Signs point to yes",
+  "Don't count on it",
+  "My reply is no",
+  "My sources say no",
+  "Outlook not so good",
+  "Very doubtful",
+  "Reply hazy",
+  "try again",
+  "Ask again later",
+  "Better not tell you now",
+  "Cannot predict now",
+  "Concentrate and ask again",
+  ]
 
-// build a function that
-// gets a random message.
-// I'll get that nth index inside of the
-// array, and then i'll return it!
 
-function getEightballMessage() {
-  // To get the message,
-  // Pick a random number between 1 and however
-  // long that array is.
-  let messagesSize = messages.length;
+function getEightBallMessage() {
+  let messagesSize = possibleReplies.length;
   let randomNumber = Math.floor(Math.random() * messagesSize);
-  return messages[randomNumber];
+  return possibleReplies[randomNumber];
 }
 
-// Somehow, we need to do the following:
 function changeMessage() {
-  // Somehow it should clear the eight ball message
   let eightEl = document.getElementById('eight');
-  eightEl.textContent = '';
-
-  // We want to get our getEightballMessage...
+  eightEl.textContent = "";
+  
   let answerEl = document.getElementById('answer');
-
-  // ...and put the message into the <p id="answer">.
-  answerEl.textContent = getEightballMessage();
+  answerEl.textContent = getEightBallMessage();
 }
 
-// We want a way to call changeMessage()
-// when we click on the shake button!
 let buttonEl = document.getElementById('button');
 buttonEl.addEventListener('click', changeMessage);
+
+var howTo = "1. Ask a Yes-or-No Question: Think of a question you want answered.\n" +
+          "2. Make sure it's something that can be answered with Yes or No or another simple response.\n" +
+          "3. Shake the Magic 8-Ball: Grab the Magic 8-Ball and give it a good shake. This mixes up the inside of the ball where the answer will come from.\n" +
+          "4. Look through the answer window on top of the 8-ball to see the answer that appears.\n" +
+          "5. Read the Answer: The Magic 8-Ball will show a response through the window.\n" +
+          "6. REMEMBER THE 8-BALL IS ALWAYS RIGHT!!";
+
+let howToButton = document.getElementById('howTo');
+
+function createHowToWindow() {
+  alert(howTo);
+}
+howToButton.addEventListener('click', createHowToWindow);

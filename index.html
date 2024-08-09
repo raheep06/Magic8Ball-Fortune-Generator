@@ -1,44 +1,60 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset = "utf-8">
-    <meta name = "viewport" content = "width=device-width">
-    <title> Magic 8 Ball! </title>
-    <link href = "style.css" rel = "stylesheet" type = "text/css"/>
-  </head>
-  
-  <body>
-    <!-- Title our page with an h1 tag! -->
-    <h1> Magic 8 Ball </h1>
+    <head>
+        <!-- Adding the required metadata for my game -->
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width = device-width">
+        
+        <!-- Titling my page -->
+        <title> Magic 8 Ball </title>
+        
 
-    <p> Type in your question: </p>
+        
+        <!-- Adding FredokaOne Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
 
-    <!-- Let's create a text box with an id of "input" -->    
-    <input type="text" id="input"/>
+        <!-- Linking my HTML game website to my styling sheet -->
+        <link href = "style.css" rel = "stylesheet" type = "text/css">
+        
 
+    </head>
     
-    <!-- This is where we'll put our 8 Ball! -->
-    <!-- Create a div tag with a class "eight-ball" -->
-    <div class = "eight-ball">
-      
-      <!-- Create a div tag inside with the class "answer" -->
-      <div class = "answer">
-        <!-- Create a p tag with an ID of "eight" -->
-        <p id ="eight">8</p>
-        <!-- Put the number "8" inside those tags. -->
-
-        <!-- Create a p tag with an ID of "answer" -->
-        <p id="answer"></p>
-      </div>
-    </div>
-
-    <!-- Add a shake button Using the button HTML tag -->
-    <button id="button">Shake it!</button>
-    <!-- Make sure there's an id named "button" -->
-    <!-- Make it say "Shake" or "Shake Me!" -->
-
-
-    <script src="script.js"></script>
-
-  </body>
+    
+    <body>
+        <h1> Magic 8 Ball!! </h1>
+        
+        <!-- This is the button that will explain to the you how you play -->
+        <button id = "howTo"> How to play? </button>
+        
+        <!-- Asking the user for their question -->
+        <p> Type in your million dollar question: </p>
+        
+        <!-- Allow the user to input text -->
+        <input type="text" id="input"/>
+        
+        
+        <div class = "eight-ball">
+            
+            <div class = "answer">
+                
+                <p id = "eight">
+                    8
+                </p>
+                
+                <p id = "answer">
+                    
+                </p>
+            </div>
+            
+        </div>
+        
+        
+        <!-- Now adding a shake Button to allow you to actually shake the ball -->
+        <button id = "button">Shake it!</button>
+        
+        <!-- Linking my HTML game website to my JavaScript -->
+        <script src="script.js"></script>
+    </body>
 </html>
